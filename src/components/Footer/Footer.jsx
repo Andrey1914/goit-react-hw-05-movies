@@ -1,4 +1,4 @@
-import { DeveloperData, FooterWrapper, Svg } from './Footer.styled';
+import { DeveloperData, FooterWrapper, Svg } from './FooterStyled';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/Ye2212"
+          href="https://github.com/Andrey1914"
         >
           <Svg />
         </a>

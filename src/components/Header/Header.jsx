@@ -23,7 +23,9 @@ export default function Header() {
         <NavigationItem>
           <NavigationLink to="/">Home</NavigationLink>
         </NavigationItem>
-        <NavigationItem to="/movies">Movies</NavigationItem>
+        <NavigationItem>
+          <NavigationLink to="/movies">Movies</NavigationLink>
+        </NavigationItem>
       </NavigationList>
     </HeaderWrapper>
   );

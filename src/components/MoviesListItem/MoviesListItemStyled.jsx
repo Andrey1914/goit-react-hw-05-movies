@@ -27,7 +27,7 @@ export const Image = styled.img`
   height: 440px;
   margin-bottom: 10px;
   @media (min-width: 768px) {
-    width: 350px;
+    /* width: 350px; */
   }
   object-fit: cover;
 `;

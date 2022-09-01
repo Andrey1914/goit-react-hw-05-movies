@@ -1,4 +1,4 @@
-import { GoBackBtn, ArrowBack } from './GoBackBtn.styled';
+import { GoBackBtn, ArrowBack } from './BackButtonStyled';
 import { useNavigate } from 'react-router-dom';
 
 export default function GoBackButton({ location }) {

@@ -11,11 +11,11 @@ export default function CastPage() {
   useEffect(() => {
     fetchMovieCast(movieId).then(r => {
       const mappedActors = [];
-      r.cast.map(({ id, original_name, Profile_path }) => {
+      r.cast.map(({ id, original_name, profile_path }) => {
         const actor = {
           id: id,
           name: original_name,
-          photo: Profile_path,
+          photo: profile_path,
         };
         return mappedActors.push(actor);
       });
@@ -23,7 +23,7 @@ export default function CastPage() {
     });
   }, [movieId]);
 
-  return cast && cast.lenght > 0 ? (
+  return cast && cast.length > 0 ? (
     <Cast cast={cast} />
   ) : (
     <NoInformationText>Sorry, we have no information here.</NoInformationText>

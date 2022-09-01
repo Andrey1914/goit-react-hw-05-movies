@@ -1,6 +1,7 @@
 import propTypes from 'prop-types';
 import plug from '../../default-pic/noPic.jpg';
 import { CastsList, Item, Photo, ActorName } from './CastStyled';
+
 export default function Cast({ cast }) {
   return (
     <>
