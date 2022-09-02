@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom';
-import {
-  HeaderWrapper,
-  LogoWrapper,
-  Logo,
-  NavigationList,
-  NavigationItem,
-  NavigationLink,
-} from './HeaderStyled';
+import { Logo, NavigationItem, NavigationLink } from './HeaderStyled';
+import { Box } from 'components/Box';
 
 export default function Header() {
   return (
-    <HeaderWrapper>
-      <NavigationList>
+    <Box as="header" display="flex" width="100%" height="60px" bg="black">
+      <Box as="ul" display="flex" alignItems="center" gridGap={6}>
         <NavigationItem>
           <Link to="/">
-            <LogoWrapper>
+            <Box
+              display="flex"
+              alignItems="center"
+              ml={5}
+              mr={6}
+              color="white"
+              fontSize={16}
+            >
               <Logo />
               Filmoteka
-            </LogoWrapper>
+            </Box>
           </Link>
         </NavigationItem>
         <NavigationItem>
@@ -26,7 +27,7 @@ export default function Header() {
         <NavigationItem>
           <NavigationLink to="/movies">Movies</NavigationLink>
         </NavigationItem>
-      </NavigationList>
-    </HeaderWrapper>
+      </Box>
+    </Box>
   );
 }

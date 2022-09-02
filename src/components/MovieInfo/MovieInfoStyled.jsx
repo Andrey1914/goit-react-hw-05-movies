@@ -6,12 +6,13 @@ import {
 } from 'react-icons/md';
 
 export const MainWrapper = styled.div`
-  padding: 0 100px;
+  margin-left: 80px;
+  margin-right: 80px;
 `;
 
 export const Section = styled.section`
-  margin-top: 10px;
-  padding: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: flex;
 `;
 

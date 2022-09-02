@@ -1,14 +1,15 @@
-import { Main } from './MainContentStyled';
+// import { Main } from './MainContentStyled';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import LoaderBallTriangle from 'components/Loader/Loader';
+import LoaderOval from 'components/Loader/Loader';
+import { Box } from 'components/Box';
 
 export default function MainContent() {
   return (
-    <Main>
-      <Suspense fullback={<LoaderBallTriangle />}>
+    <Box as="main">
+      <Suspense fullback={<LoaderOval />}>
         <Outlet />
       </Suspense>
-    </Main>
+    </Box>
   );
 }

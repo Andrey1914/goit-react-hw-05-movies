@@ -2,7 +2,10 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Layout from './Layout/Layout';
 import NotFound from 'pages/NotFound/NotFound';
-import LoaderBallTriangle from './Loader/Loader';
+import LoaderOval from './Loader/Loader';
+
+import { Global } from '@emotion/react';
+import { GlobalStyles } from './GlobalStyles';
 
 const Home = lazy(() => import('../pages/Home'));
 const Movies = lazy(() => import('../pages/Movies'));
@@ -13,7 +16,8 @@ const ReviewsPage = lazy(() => import('../pages/ReviewsPage'));
 export default function App() {
   return (
     <>
-      <Suspense fullback={<LoaderBallTriangle />}>
+      <Global styles={GlobalStyles} />
+      <Suspense fullback={<LoaderOval />}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

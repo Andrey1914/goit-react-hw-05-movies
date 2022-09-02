@@ -1,6 +1,7 @@
+import { Box } from 'components/Box';
 import propTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
-import { Item, Info, Image, Title, Vote } from './MoviesListItemStyled';
+import { Item, Image, Title, Vote } from './MoviesListItemStyled';
 
 export default function MoviesListItem({ id, title, poster, vote }) {
   const location = useLocation();
@@ -10,10 +11,15 @@ export default function MoviesListItem({ id, title, poster, vote }) {
         to={`/movies/${id}`}
         state={{ from: location.pathname + location.search }}
       >
-        <Info>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          p={15}
+        >
           <Title>{title ? title : 'No title'}</Title>
           <Vote>Vote: {vote}</Vote>
-        </Info>
+        </Box>
 
         <Image
           src={
