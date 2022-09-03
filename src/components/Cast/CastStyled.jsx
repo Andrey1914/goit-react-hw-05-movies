@@ -35,8 +35,8 @@ export const Photo = styled.img``;
 
 export const ActorName = styled.h3`
   padding: ${p => p.theme.space[3]}px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: ${p => p.theme.fontSizes[1]}px;
+  font-weight: ${p => p.theme.fontWeigths[1]};
   color: ${p => p.theme.colors.black};
 `;
 
@@ -44,5 +44,5 @@ export const NoInformationText = styled.p`
   display: flex;
   justify-content: center;
   padding: ${p => p.theme.space[4]}px;
-  font-weight: 500;
+  font-weight: ${p => p.theme.fontWeigths[1]};
 `;

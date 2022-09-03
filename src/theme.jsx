@@ -12,23 +12,14 @@ export const theme = {
     muted: '#ccc',
     lightMuted: '#ededed',
   },
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 152, 256, 320, 512],
+  space: [0, 2, 4, 8, 16, 20, 32, 64, 128, 152, 256, 320, 512],
   fonts: {
     body: 'Roboto, Oxygen, sans-serif',
     heading: 'Roboto, Oxygen, sans-serif',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: {
-    xs: 12,
-    s: 14,
-    m: 16,
-    l: 32,
-    xl: 64,
-  },
-  fontWeights: {
-    normal: 400,
-    bold: 700,
-  },
+  fontSizes: [12, 14, 16, 32, 64],
+  fontWeigths: [400, 500, 700],
   lineHeights: {
     body: 1.5,
     heading: 1.125,
@@ -44,4 +35,11 @@ export const theme = {
     big: '8px',
     round: '50%',
   },
+  //   breakpoints: [ '40em', '52em', '64em' ],
+
+  // mediaQueries: {
+  //   // small: `@media screen and (min-width: ${breakpoints[0]})`,
+  //   medium: `@media screen and (min-width: 768px)`,
+  //   large: `@media screen and (min-width: 1200px)`,
+  // },
 };

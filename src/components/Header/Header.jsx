@@ -14,7 +14,7 @@ export default function Header() {
               ml={5}
               mr={6}
               color="white"
-              fontSize={16}
+              fontSize={1}
             >
               <Logo />
               Filmoteka

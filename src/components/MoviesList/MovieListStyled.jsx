@@ -1,11 +1,17 @@
 import styled from '@emotion/styled';
 
 export const List = styled.ul`
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  max-width: calc(100vw - 48px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${p => p.theme.space[4]}px;
+  max-width: ${p => p.theme.space[9]}px;
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 80px 50px;
+
+  @media (min-width: 768px) {
+    max-width: 592px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
 `;

@@ -19,7 +19,7 @@ export const NavigationItem = styled.li`
   }
 `;
 export const NavigationLink = styled(NavLink)`
-  font-size: ${p => p.theme.space[4]}px;
+  font-size: ${p => p.theme.fontSizes[1]}px;
   color: ${p => p.theme.colors.white};
   transition: opacity 250ms ease-in-out;
   :hover,

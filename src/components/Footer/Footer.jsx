@@ -9,7 +9,7 @@ export default function Footer() {
       alignItems="center"
       py={3}
       bg="lightMuted"
-      fontSize="xs"
+      fontSize={0}
     >
       <Box display="flex" alignItems="center" mx="auto">
         © 2022 | Developed by

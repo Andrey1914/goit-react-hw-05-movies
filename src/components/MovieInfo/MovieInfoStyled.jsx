@@ -16,29 +16,29 @@ export const InfoThumb = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: ${p => p.theme.fontSizes[3]}px;
   color: ${p => p.theme.colors.black};
 `;
 export const SubTitle = styled.h3`
-  font-size: 18px;
+  font-size: ${p => p.theme.fontSizes[2]}px;
   color: ${p => p.theme.colors.black};
 `;
 export const InfoText = styled.p`
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: ${p => p.theme.fontWeigths[0]};
+  font-size: ${p => p.theme.fontSizes[1]}px;
 
   margin-bottom: 20px;
 `;
 
 export const AditionalText = styled.p`
   color: ${p => p.theme.colors.white};
-  font-size: 20px;
-  font-weight: 500;
+  font-size: ${p => p.theme.fontSizes[2]}px;
+  font-weight: ${p => p.theme.fontWeigths[1]};
 `;
 
 export const Item = styled.li`
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: ${p => p.theme.space[3]}px;
   align-items: center;
   transition: all 250ms;
 
@@ -51,13 +51,13 @@ export const Item = styled.li`
   }
 `;
 export const StyledLink = styled(NavLink)`
-  font-size: 18px;
+  font-size: ${p => p.theme.fontSizes[2]}px;
   color: ${p => p.theme.colors.black};
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const ArrowForward = styled(MdOutlineArrowForwardIos)`
-  margin-left: 5px;
-  height: 13px;
+  margin-left: ${p => p.theme.space[2]}px;
+  height: ${p => p.theme.space[4]}px;
 `;
