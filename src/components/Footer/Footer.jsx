@@ -12,7 +12,7 @@ export default function Footer() {
       fontSize="xs"
     >
       <Box display="flex" alignItems="center" mx="auto">
-        © 2022 | All Rights Reserved | Developed by
+        © 2022 | Developed by
         <a
           target="_blank"
           rel="noopener noreferrer"
