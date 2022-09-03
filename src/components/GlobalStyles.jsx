@@ -27,17 +27,16 @@ export const GlobalStyles = css`
   h6,
   label,
   ul,
-  p {
+  p,
+  a {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-decoration: none;
   }
   img {
     display: block;
     max-width: 100%;
     height: auto;
-  }
-  a {
-    text-decoration: none;
   }
 `;

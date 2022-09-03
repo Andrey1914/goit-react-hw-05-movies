@@ -9,14 +9,11 @@ export const GoBackBtn = styled.button`
   color: white;
   border: none;
   border-radius: 4px;
-  margin-top: 100px;
   transform: scale(1);
   transition: all 250ms;
-  :hover {
+  :hover,
+  :focus {
     transform: scale(0.92);
-  }
-  :hover {
-    opacity: 0.8;
   }
 `;
 export const ArrowBack = styled(MdOutlineArrowBackIosNew)`

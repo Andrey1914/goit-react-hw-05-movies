@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesBySearch } from 'services/api';
-import {
-  Form,
-  Button,
-  SearchSvg,
-  Input,
-} from '../components/SearchBar/SearchBarStyled';
+import { Form, Button, Input } from '../components/SearchBar/SearchBarStyled';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MoviesList from 'components/MoviesList/MovieList';
 import { Mapper } from 'utils/Mapper';
+import { Box } from 'components/Box';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Movies() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -50,20 +47,22 @@ export default function Movies() {
   return (
     <>
       <ToastContainer />
-      <Form onSubmit={onFormSubmit}>
-        <Button type="submit">
-          <span>
-            <SearchSvg />
-          </span>
-        </Button>
-        <Input
-          type="text"
-          name="query"
-          value={searchQuery}
-          onChange={onChangeQuery}
-        ></Input>
-      </Form>
-      {movies && <MoviesList movies={movies} />}
+      <Box as="section" py={3}>
+        <Box mx="auto">
+          <Form onSubmit={onFormSubmit}>
+            <Button type="submit">
+              <AiOutlineSearch size={20} />
+            </Button>
+            <Input
+              type="text"
+              name="query"
+              value={searchQuery}
+              onChange={onChangeQuery}
+            ></Input>
+          </Form>
+          {movies && <MoviesList movies={movies} />}
+        </Box>
+      </Box>
     </>
   );
 }

@@ -2,30 +2,25 @@ import propTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import GoBackButton from 'components/BackButton/BackButton';
 import {
-  MainWrapper,
-  Section,
   Image,
   InfoThumb,
-  TitleWrapper,
   Title,
   SubTitle,
   InfoText,
-  ExtraInfo,
-  Wrapper,
   AditionalText,
-  ExtraPagesList,
   Item,
   StyledLink,
   ArrowForward,
 } from './MovieInfoStyled';
+import { Box } from 'components/Box';
 
 export default function MovieInfo({ movieDetails }) {
   const { title, genres, poster, overview, releaseDate, vote } = movieDetails;
   const location = useLocation();
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
-    <MainWrapper>
-      <Section>
+    <Box mx={6}>
+      <Box as="section" display="flex" justifyContent="space-between" py={6}>
         <Image
           src={
             poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Image'
@@ -33,10 +28,15 @@ export default function MovieInfo({ movieDetails }) {
           alt={title}
         />
         <InfoThumb>
-          <TitleWrapper>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            mb={5}
+          >
             <Title>{title}</Title>
             <SubTitle>Vote: {vote}</SubTitle>
-          </TitleWrapper>
+          </Box>
           <SubTitle>Date release: {releaseDate}</SubTitle>
           <SubTitle>Overview:</SubTitle>
           <InfoText>{overview}</InfoText>
@@ -44,14 +44,14 @@ export default function MovieInfo({ movieDetails }) {
           <InfoText>{genresInfo}</InfoText>
           <GoBackButton location={location} />
         </InfoThumb>
-      </Section>
+      </Box>
 
-      <ExtraInfo>
-        <Wrapper>
+      <Box>
+        <Box bg="black" p={4} mb={4}>
           <AditionalText>Aditional Information</AditionalText>
-        </Wrapper>
+        </Box>
 
-        <ExtraPagesList>
+        <Box as="ul">
           <Item>
             <StyledLink to="cast" state={location.state}>
               Cast
@@ -64,9 +64,9 @@ export default function MovieInfo({ movieDetails }) {
               <ArrowForward />
             </StyledLink>
           </Item>
-        </ExtraPagesList>
-      </ExtraInfo>
-    </MainWrapper>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 

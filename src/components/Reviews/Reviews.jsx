@@ -1,10 +1,11 @@
+import { Box } from 'components/Box';
 import propTypes from 'prop-types';
-import { ReviewsList, Item, Author, ReviewContent } from './ReviewsStyled';
+import { Item, Author, ReviewContent } from './ReviewsStyled';
 
 export default function Reviews({ reviews }) {
   return (
     <>
-      <ReviewsList>
+      <Box as="ul" px={7} py={5}>
         {reviews.map(({ author, review, id }) => (
           <Item key={id}>
             <Author>
@@ -12,7 +13,7 @@ export default function Reviews({ reviews }) {
             </Author>
           </Item>
         ))}
-      </ReviewsList>
+      </Box>
     </>
   );
 }

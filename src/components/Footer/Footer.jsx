@@ -1,9 +1,17 @@
-import { DeveloperData, FooterWrapper, Svg } from './FooterStyled';
+import { Box } from 'components/Box';
+import { Svg } from './FooterStyled';
 
 export default function Footer() {
   return (
-    <FooterWrapper>
-      <DeveloperData>
+    <Box
+      as="footer"
+      display="flex"
+      alignItems="center"
+      py={3}
+      bg="lightMuted"
+      fontSize="xs"
+    >
+      <Box display="flex" alignItems="center" mx="auto">
         © 2022 | All Rights Reserved | Developed by
         <a
           target="_blank"
@@ -12,7 +20,7 @@ export default function Footer() {
         >
           <Svg />
         </a>
-      </DeveloperData>
-    </FooterWrapper>
+      </Box>
+    </Box>
   );
 }
