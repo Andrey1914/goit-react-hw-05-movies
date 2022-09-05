@@ -19,8 +19,8 @@ export default function MovieInfo({ movieDetails }) {
   const location = useLocation();
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
-    <Box mx={6}>
-      <Box as="section" display="flex" justifyContent="space-between" py={6}>
+    <Box mx={5}>
+      <Box as="section" display="flex" justifyContent="space-between" py={5}>
         <Image
           src={
             poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Image'

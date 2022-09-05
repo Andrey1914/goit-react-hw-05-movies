@@ -13,6 +13,9 @@ export const Item = styled.li`
     transform: scale(1.03);
     cursor: zoom-in;
   }
+  @media (max-width: 320px) {
+    max-width: 300px;
+  }
 `;
 
 export const Image = styled.img`

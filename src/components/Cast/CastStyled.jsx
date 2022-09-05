@@ -4,7 +4,7 @@ export const CastsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: ${p => p.theme.space[4]}px;
-  width: ${p => p.theme.space[9]}px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 
@@ -17,7 +17,7 @@ export const CastsList = styled.ul`
 `;
 
 export const Item = styled.li`
-  width: ${p => p.theme.space[8]}px;
+  width: auto;
   border-radius: ${p => p.theme.radii.small};
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
