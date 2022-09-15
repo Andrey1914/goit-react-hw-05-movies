@@ -19,7 +19,7 @@ export default function MovieInfo({ movieDetails }) {
   const location = useLocation();
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
-    <Box mx={5}>
+    <Box mx={4}>
       <Box as="section" display="flex" justifyContent="space-between" py={5}>
         <Image
           src={
