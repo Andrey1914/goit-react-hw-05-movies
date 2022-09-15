@@ -11,22 +11,25 @@ export default function MoviesListItem({ id, title, poster, vote }) {
         to={`/movies/${id}`}
         state={{ from: location.pathname + location.search }}
       >
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          p={15}
-        >
-          <Title>{title ? title : 'No title'}</Title>
-          <Vote>Vote: {vote}</Vote>
-        </Box>
+        <Box display="flex" flexDirection="column" height="100%">
+          <Box
+            display="flex"
+            flexGrow="1"
+            justifyContent="space-between"
+            alignItems="center"
+            p={15}
+          >
+            <Title>{title ? title : 'No title'}</Title>
+            <Vote>Vote: {vote}</Vote>
+          </Box>
 
-        <Image
-          src={
-            poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Poster'
-          }
-          alt={title}
-        />
+          <Image
+            src={
+              poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Poster'
+            }
+            alt={title}
+          />
+        </Box>
       </Link>
     </Item>
   );
