@@ -5,7 +5,7 @@ import { MdOutlineArrowForwardIos } from 'react-icons/md';
 export const Image = styled.img`
   width: ${p => p.theme.space[8]}px;
   @media (min-width: 768px) {
-    width: ${p => p.theme.space[9]}px;
+    width: ${p => p.theme.space[11]}px;
   }
 `;
 export const InfoThumb = styled.div`

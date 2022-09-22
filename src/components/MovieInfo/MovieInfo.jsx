@@ -20,7 +20,13 @@ export default function MovieInfo({ movieDetails }) {
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
     <Box mx={4}>
-      <Box as="section" display="flex" justifyContent="space-between" py={5}>
+      <Box
+        as="section"
+        display="flex"
+        justifyContent="space-between"
+        px="auto"
+        py={5}
+      >
         <Image
           src={
             poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Image'

@@ -7,7 +7,7 @@ export const Item = styled.li`
 `;
 export const Author = styled.p`
   font-size: ${p => p.theme.fontSizes[1]}px;
-  font-weight: ${p => p.theme.fontWeigth[1]};
+  font-weight: ${p => p.theme.fontWeigths[1]};
   color: ${p => p.theme.colors.black};
   margin-right: ${p => p.theme.space[3]}px;
 `;
@@ -17,8 +17,8 @@ export const ReviewContent = styled.span`
 `;
 
 export const NoReviewText = styled.p`
-  font-weight: ${p => p.theme.fontWeigth[1]};
-  font-size: ${p => p.theme.fontSizes[3]}25px;
+  font-weight: ${p => p.theme.fontWeigths[1]};
+  font-size: ${p => p.theme.fontSizes[3]};
   display: flex;
   justify-content: center;
   padding: ${p => p.theme.space[5]}px;
