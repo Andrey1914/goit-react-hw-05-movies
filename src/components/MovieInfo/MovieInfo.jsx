@@ -11,6 +11,8 @@ import {
   Item,
   StyledLink,
   ArrowForward,
+  Container,
+  BoxButton,
 } from './MovieInfoStyled';
 import { Box } from 'components/Box';
 
@@ -19,14 +21,8 @@ export default function MovieInfo({ movieDetails }) {
   const location = useLocation();
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
-    <Box mx={4}>
-      <Box
-        as="section"
-        display="flex"
-        justifyContent="space-between"
-        px="auto"
-        py={5}
-      >
+    <Box as="section" py={4}>
+      <Container>
         <Image
           src={
             poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Image'
@@ -48,11 +44,13 @@ export default function MovieInfo({ movieDetails }) {
           <InfoText>{overview}</InfoText>
           <SubTitle>Genres:</SubTitle>
           <InfoText>{genresInfo}</InfoText>
-          <GoBackButton location={location} />
+          <BoxButton>
+            <GoBackButton location={location} />
+          </BoxButton>
         </InfoThumb>
-      </Box>
+      </Container>
 
-      <Box>
+      <Box mx={4}>
         <Box bg="black" p={4} mb={4}>
           <AditionalText>Aditional Information</AditionalText>
         </Box>

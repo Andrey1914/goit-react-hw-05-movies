@@ -5,7 +5,7 @@ import { Item, Author, ReviewContent } from './ReviewsStyled';
 export default function Reviews({ reviews }) {
   return (
     <>
-      <Box as="ul" px={7} py={5}>
+      <Box as="ul" mx={4}>
         {reviews.map(({ author, review, id }) => (
           <Item key={id}>
             <Author>
