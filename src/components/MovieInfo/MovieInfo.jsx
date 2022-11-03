@@ -50,7 +50,7 @@ export default function MovieInfo({ movieDetails }) {
         </InfoThumb>
       </Container>
 
-      <Box mx={4}>
+      <Box ml={4} mr={6}>
         <Box bg="black" p={4} mb={4}>
           <AditionalText>Aditional Information</AditionalText>
         </Box>

@@ -6,7 +6,7 @@ export const Logo = styled(GiFilmSpool)`
   width: ${p => p.theme.space[5]}px;
   height: ${p => p.theme.space[5]}px;
   transition: opacity 250ms;
-  margin-right: ${p => p.theme.space[2]}px;
+  margin-right: ${p => p.theme.space[3]}px;
   color: ${p => p.theme.colors.white};
 `;
 
@@ -19,7 +19,7 @@ export const NavigationItem = styled.li`
   }
 `;
 export const NavigationLink = styled(NavLink)`
-  font-size: ${p => p.theme.fontSizes[1]}px;
+  font-size: ${p => p.theme.fontSizes[2]}px;
   color: ${p => p.theme.colors.white};
   transition: opacity 250ms ease-in-out;
   :hover,

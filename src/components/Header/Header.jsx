@@ -12,9 +12,9 @@ export default function Header() {
               display="flex"
               alignItems="center"
               ml={5}
-              mr={6}
+              mr={5}
               color="white"
-              fontSize={1}
+              fontSize={2}
             >
               <Logo />
               Filmoteka
