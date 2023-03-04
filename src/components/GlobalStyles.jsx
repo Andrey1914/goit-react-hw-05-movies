@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from 'styled-components';
 import 'modern-normalize';
 
 export const GlobalStyles = css`
@@ -7,11 +7,22 @@ export const GlobalStyles = css`
     width: 100vw;
     overflow-x: hidden;
   }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Thin.ttf'), format('truetype');
+  }
+  @font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Regular.ttf'), format('truetype');
+  }
+  @font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Bold.ttf'), format('truetype');
+  }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -38,5 +49,11 @@ export const GlobalStyles = css`
     display: block;
     max-width: 100%;
     height: auto;
+  }
+  button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
   }
 `;

@@ -1,25 +1,25 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Item = styled.li`
   border: 1px solid #000000d1;
-  padding: ${p => p.theme.space[5]}px;
-  margin-bottom: ${p => p.theme.space[4]}px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 `;
 export const Author = styled.p`
-  font-size: ${p => p.theme.fontSizes[1]}px;
-  font-weight: ${p => p.theme.fontWeigths[1]};
-  color: ${p => p.theme.colors.black};
-  margin-right: ${p => p.theme.space[3]}px;
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
+  color: ${({ theme }) => theme.color.dark};
+  margin-right: 1rem;
 `;
 export const ReviewContent = styled.span`
-  color: ${p => p.theme.colors.black};
-  font-size: 12px;
+  color: ${({ theme }) => theme.color.dark};
+  font-size: 1rem;
 `;
 
 export const NoReviewText = styled.p`
-  font-weight: ${p => p.theme.fontWeigths[1]};
-  font-size: ${p => p.theme.fontSizes[3]};
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
+  font-size: 1rem;
   display: flex;
   justify-content: center;
-  padding: ${p => p.theme.space[5]}px;
+  padding: 1rem;
 `;

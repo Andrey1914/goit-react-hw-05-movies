@@ -1,32 +1,47 @@
 export const theme = {
-  colors: {
-    black: '#000',
-    white: '#fff',
-    text: '#000',
-    textHover: '#fff',
-    background: '#fff',
+  color: {
+    dark: '#000000',
+    darkGray: '#262637',
+    lightGray: '#aaa',
+    light: '#fff',
+    secondaryLight: '#f1f1f1',
+    tertiaryLight: '#d3d3d3',
+    link: '#4353ff',
+
     backdrop: 'rgba(0, 0, 0, 0.8)',
-    primary: '#07c',
-    secondary: '#05a',
-    accent: '#609',
-    muted: '#ccc',
-    lightMuted: '#ededed',
+  },
+  backgroundColor: {
+    dark: '#0d0e0e',
+    light: '#ffffff',
+    orange: '#e64e04',
+    darkGray: '#111',
   },
   space: [0, 2, 4, 8, 16, 20, 32, 64, 128, 152, 256, 320, 512],
+  // fonts: {
+  //   body: 'Roboto, Oxygen, sans-serif',
+  //   heading: 'Roboto, Oxygen, sans-serif',
+  //   monospace: 'Menlo, monospace',
+  // },
   fonts: {
-    body: 'Roboto, Oxygen, sans-serif',
-    heading: 'Roboto, Oxygen, sans-serif',
-    monospace: 'Menlo, monospace',
+    montserrat: "'Montserrat', sans-serif",
+    roboto: "'Roboto', sans-serif",
   },
-  fontSizes: [12, 14, 16, 32, 64],
-  fontWeigths: [400, 500, 700],
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
+  fontSizes: {
+    xs: '12px',
+    s: '14px',
+    m: '16px',
+    l: '24px',
+    xl: '32px',
   },
+  fontWeights: {
+    thin: 100,
+    normal: 400,
+    bold: 700,
+  },
+
   borders: {
     none: 'none',
-    normal: '1px solid #ccc',
+    normal: '1px solid',
   },
   radii: {
     none: '0',
@@ -35,11 +50,10 @@ export const theme = {
     big: '8px',
     round: '50%',
   },
-  //   breakpoints: [ '40em', '52em', '64em' ],
-
-  // mediaQueries: {
-  //   // small: `@media screen and (min-width: ${breakpoints[0]})`,
-  //   medium: `@media screen and (min-width: 768px)`,
-  //   large: `@media screen and (min-width: 1200px)`,
-  // },
+  breakpoints: {
+    lg: '1200px',
+    md: '768px',
+    sm: '536px',
+    xs: '320px',
+  },
 };

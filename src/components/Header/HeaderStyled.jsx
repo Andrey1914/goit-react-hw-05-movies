@@ -1,13 +1,38 @@
-import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { Link as NavLink } from 'react-router-dom';
 import { GiFilmSpool } from 'react-icons/gi';
 
+export const HeaderElement = styled.header`
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: ${({ theme }) => theme.backgroundColor.dark};
+`;
+
+export const HeaderContainer = styled.div`
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin: 0 3.5rem;
+  }
+`;
+
 export const Logo = styled(GiFilmSpool)`
-  width: ${p => p.theme.space[5]}px;
-  height: ${p => p.theme.space[5]}px;
+  width: 2.5rem;
+  height: 2.5rem;
   transition: opacity 250ms;
-  margin-right: ${p => p.theme.space[3]}px;
-  color: ${p => p.theme.colors.white};
+  margin-right: 1rem;
+  color: ${({ theme }) => theme.color.light};
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.color.light};
+`;
+
+export const NavigationList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 3rem;
 `;
 
 export const NavigationItem = styled.li`
@@ -16,15 +41,16 @@ export const NavigationItem = styled.li`
   :hover,
   :focus {
     transform: scale(0.92);
+    color: ${({ theme }) => theme.color.link};
   }
 `;
 export const NavigationLink = styled(NavLink)`
-  font-size: ${p => p.theme.fontSizes[2]}px;
-  color: ${p => p.theme.colors.white};
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.color.light};
   transition: opacity 250ms ease-in-out;
   :hover,
   :focus {
-    color: ${p => p.theme.colors.lightMuted};
+    color: ${({ theme }) => theme.color.link};
     opacity: 0.8;
   }
 `;

@@ -1,14 +1,14 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
 
 export const Container = styled.div`
-  margin-bottom: ${p => p.theme.space[4]}px;
+  margin-bottom: 16px;
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    margin-left: ${p => p.theme.space[4]}px;
-    margin-right: ${p => p.theme.space[6]}px;
+    margin-left: 16px;
+    margin-right: 32px;
   } ;
 `;
 
@@ -17,35 +17,34 @@ export const Image = styled.img`
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: ${p => p.theme.space[4]}px;
+    margin-bottom: 16px;
   }
   @media (min-width: 768px) {
-    width: ${p => p.theme.space[11]}px;
+    width: 320px;
   }
 `;
 export const InfoThumb = styled.div`
   @media (max-width: 767px) {
-    margin-left: ${p => p.theme.space[4]}px;
-    margin-right: ${p => p.theme.space[4]}px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
   @media (min-width: 768px) {
-    padding-left: ${p => p.theme.space[5]}px;
+    padding-left: 32px;
   }
 `;
 
 export const Title = styled.h2`
-  font-size: ${p => p.theme.fontSizes[3]}px;
-  color: ${p => p.theme.colors.black};
+  font-size: 1rem;
+  color: ${({ theme }) => theme.color.dark};
 `;
 export const SubTitle = styled.h3`
-  font-size: ${p => p.theme.fontSizes[2]}px;
-  color: ${p => p.theme.colors.black};
-  margin-bottom: ${p => p.theme.space[4]}px;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.color.dark};
+  margin-bottom: 16px;
 `;
 export const InfoText = styled.p`
-  font-weight: ${p => p.theme.fontWeigths[0]};
-  font-size: ${p => p.theme.fontSizes[1]}px;
-
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
+  font-size: 1rem;
   margin-bottom: 20px;
 `;
 
@@ -59,14 +58,14 @@ export const BoxButton = styled.div`
 `;
 
 export const AditionalText = styled.p`
-  color: ${p => p.theme.colors.white};
-  font-size: ${p => p.theme.fontSizes[2]}px;
-  font-weight: ${p => p.theme.fontWeigths[1]};
+  color: ${({ theme }) => theme.color.light};
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
 `;
 
 export const Item = styled.li`
   display: block;
-  margin-bottom: ${p => p.theme.space[3]}px;
+  margin-bottom: 16px;
   align-items: center;
   transition: all 250ms;
 
@@ -79,13 +78,13 @@ export const Item = styled.li`
   }
 `;
 export const StyledLink = styled(NavLink)`
-  font-size: ${p => p.theme.fontSizes[2]}px;
-  color: ${p => p.theme.colors.black};
+  font-size: 1rem;
+  color: ${({ theme }) => theme.color.dark};
   display: block;
-  margin-bottom: ${p => p.theme.space[3]}px;
+  margin-bottom: 16px;
 `;
 
 export const ArrowForward = styled(MdOutlineArrowForwardIos)`
-  margin-left: ${p => p.theme.space[2]}px;
-  height: ${p => p.theme.space[4]}px;
+  margin-left: 8px;
+  height: 16px;
 `;
