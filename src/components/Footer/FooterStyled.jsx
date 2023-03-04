@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { BsGithub } from 'react-icons/bs';
 
 export const Svg = styled(BsGithub)`
-  margin-left: ${p => p.theme.space[2]}px;
-  color: ${p => p.theme.colors.black};
+  margin-left: 1rem;
+  color: ${({ theme }) => theme.color.dark};
   width: ${p => p.theme.space[5]}px;
   height: ${p => p.theme.space[5]}px;
   transform: scale(1);

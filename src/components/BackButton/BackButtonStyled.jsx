@@ -1,12 +1,12 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 
 export const GoBackBtn = styled.button`
-  width: ${p => p.theme.space[8]}px;
-  height: ${p => p.theme.space[6]}px;
-  font-size: ${p => p.theme.fontSizes[0]}px;
-  background-color: ${p => p.theme.colors.black};
-  color: ${p => p.theme.colors.white};
+  width: 128px;
+  height: 32px;
+  font-size: 1rem;
+  background-color: ${({ theme }) => theme.backgroundColor.dark};
+  color: ${({ theme }) => theme.color.light};
   border: ${p => p.theme.borders.none};
   border-radius: ${p => p.theme.radii.normal};
   transform: scale(1);
@@ -17,5 +17,5 @@ export const GoBackBtn = styled.button`
   }
 `;
 export const ArrowBack = styled(MdOutlineArrowBackIosNew)`
-  margin-right: ${p => p.theme.space[2]}px;
+  margin-right: 4px;
 `;
