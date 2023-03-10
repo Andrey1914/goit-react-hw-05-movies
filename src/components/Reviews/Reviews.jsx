@@ -1,19 +1,29 @@
-import { Box } from 'components/Box';
 import propTypes from 'prop-types';
-import { Item, Author, ReviewContent } from './ReviewsStyled';
+import {
+  ReviewsSection,
+  ReviewsContainer,
+  ReviewsList,
+  Item,
+  Author,
+  ReviewContent,
+} from './ReviewsStyled';
 
 export default function Reviews({ reviews }) {
   return (
     <>
-      <Box as="ul" mx={4}>
-        {reviews.map(({ author, review, id }) => (
-          <Item key={id}>
-            <Author>
-              {author}: <ReviewContent>"{review}"</ReviewContent>
-            </Author>
-          </Item>
-        ))}
-      </Box>
+      <ReviewsSection>
+        <ReviewsContainer>
+          <ReviewsList>
+            {reviews.map(({ author, review, id }) => (
+              <Item key={id}>
+                <Author>
+                  {author}: <ReviewContent>"{review}"</ReviewContent>
+                </Author>
+              </Item>
+            ))}
+          </ReviewsList>
+        </ReviewsContainer>
+      </ReviewsSection>
     </>
   );
 }

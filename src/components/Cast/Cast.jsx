@@ -1,29 +1,49 @@
-import { Box } from 'components/Box';
 import propTypes from 'prop-types';
-import plug from '../../default-pic/noPic.jpg';
-import { CastsList, Item, Photo, ActorName } from './CastStyled';
+import placeholder from '../../default-pic/dog-placeholder.webp';
+import {
+  Line,
+  CastSection,
+  CastContainer,
+  CastsList,
+  Item,
+  ActorContainer,
+  Photo,
+  ActorName,
+  ActorNameContainer,
+} from './CastStyled';
 
 export default function Cast({ cast }) {
   return (
     <>
-      <Box as="section" py={4}>
-        <CastsList>
-          {cast.map(({ id, name, photo }) => (
-            <Item key={id}>
-              {photo ? (
-                <Photo
-                  src={`https://image.tmdb.org/t/p/w300/${photo}`}
-                  alt={name}
-                />
-              ) : (
-                <img src={plug} alt={name} width={300} height={450} />
-              )}
-
-              <ActorName>{name}</ActorName>
-            </Item>
-          ))}
-        </CastsList>
-      </Box>
+      <Line />
+      <CastSection>
+        <CastContainer>
+          <CastsList>
+            {cast.map(({ id, name, photo }) => (
+              <Item key={id}>
+                <ActorContainer>
+                  {photo ? (
+                    <Photo
+                      src={`https://image.tmdb.org/t/p/w300/${photo}`}
+                      alt={name}
+                    />
+                  ) : (
+                    <img
+                      src={placeholder}
+                      alt={name}
+                      width="100%"
+                      height="100%"
+                    />
+                  )}
+                  <ActorNameContainer>
+                    <ActorName>{name}</ActorName>
+                  </ActorNameContainer>
+                </ActorContainer>
+              </Item>
+            ))}
+          </CastsList>
+        </CastContainer>
+      </CastSection>
     </>
   );
 }
