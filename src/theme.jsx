@@ -15,13 +15,10 @@ export const theme = {
     light: '#ffffff',
     orange: '#e64e04',
     darkGray: '#111',
+    darkGrayAlpha: 'rgba(0, 0, 0, 0.9)',
   },
   space: [0, 2, 4, 8, 16, 20, 32, 64, 128, 152, 256, 320, 512],
-  // fonts: {
-  //   body: 'Roboto, Oxygen, sans-serif',
-  //   heading: 'Roboto, Oxygen, sans-serif',
-  //   monospace: 'Menlo, monospace',
-  // },
+
   fonts: {
     montserrat: "'Montserrat', sans-serif",
     roboto: "'Roboto', sans-serif",
@@ -51,7 +48,7 @@ export const theme = {
     round: '50%',
   },
   breakpoints: {
-    lg: '1200px',
+    lg: '1280px',
     md: '768px',
     sm: '536px',
     xs: '320px',

@@ -1,11 +1,11 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Form = styled.form`
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: ${p => p.theme.space[3]}px;
+  gap: 1.5rem;
   width: 100%;
   max-width: 500px;
 `;
@@ -34,5 +34,5 @@ export const Input = styled.input`
   font: inherit;
   font-size: inherit;
   outline: none;
-  padding-left: ${p => p.theme.space[2]}px;
+  padding-left: 1rem;
 `;

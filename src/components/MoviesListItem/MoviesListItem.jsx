@@ -1,27 +1,27 @@
-import { Box } from 'components/Box';
 import propTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
-import { Item, Image, Title, Vote } from './MoviesListItemStyled';
+import {
+  Card,
+  CardStyled,
+  CardDescription,
+  Image,
+  Title,
+  Vote,
+} from './MoviesListItemStyled';
 
 export default function MoviesListItem({ id, title, poster, vote }) {
   const location = useLocation();
   return (
-    <Item>
+    <Card>
       <Link
         to={`/movies/${id}`}
         state={{ from: location.pathname + location.search }}
       >
-        <Box display="flex" flexDirection="column" height="100%">
-          <Box
-            display="flex"
-            flexGrow="1"
-            justifyContent="space-between"
-            alignItems="center"
-            p={15}
-          >
+        <CardStyled>
+          <CardDescription>
             <Title>{title ? title : 'No title'}</Title>
             <Vote>Vote: {vote}</Vote>
-          </Box>
+          </CardDescription>
 
           <Image
             src={
@@ -29,9 +29,9 @@ export default function MoviesListItem({ id, title, poster, vote }) {
             }
             alt={title}
           />
-        </Box>
+        </CardStyled>
       </Link>
-    </Item>
+    </Card>
   );
 }
 

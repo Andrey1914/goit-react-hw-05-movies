@@ -2,26 +2,35 @@ import propTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import GoBackButton from 'components/BackButton/BackButton';
 import {
+  MovieInfoSection,
   Image,
-  InfoThumb,
+  InfoCard,
+  InfoCardHeader,
   Title,
   SubTitle,
-  InfoText,
+  DateRelease,
+  Date,
+  Overview,
+  OverviewText,
+  Genres,
+  GenresText,
+  AditionalInformationContainer,
   AditionalText,
+  ContainerCastReviews,
+  CastReviewsList,
   Item,
   StyledLink,
   ArrowForward,
   Container,
   BoxButton,
 } from './MovieInfoStyled';
-import { Box } from 'components/Box';
 
 export default function MovieInfo({ movieDetails }) {
   const { title, genres, poster, overview, releaseDate, vote } = movieDetails;
   const location = useLocation();
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
-    <Box as="section" py={4}>
+    <MovieInfoSection>
       <Container>
         <Image
           src={
@@ -29,33 +38,28 @@ export default function MovieInfo({ movieDetails }) {
           }
           alt={title}
         />
-        <InfoThumb>
-          <Box
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-            mb={5}
-          >
+        <InfoCard>
+          <InfoCardHeader>
             <Title>{title}</Title>
             <SubTitle>Vote: {vote}</SubTitle>
-          </Box>
-          <SubTitle>Date release: {releaseDate}</SubTitle>
-          <SubTitle>Overview:</SubTitle>
-          <InfoText>{overview}</InfoText>
-          <SubTitle>Genres:</SubTitle>
-          <InfoText>{genresInfo}</InfoText>
+          </InfoCardHeader>
+          <DateRelease>Date release:</DateRelease>
+          <Date>{releaseDate}</Date>
+          <Overview>Overview:</Overview>
+          <OverviewText>{overview}</OverviewText>
+          <Genres>Genres:</Genres>
+          <GenresText>{genresInfo}</GenresText>
           <BoxButton>
             <GoBackButton location={location} />
           </BoxButton>
-        </InfoThumb>
+        </InfoCard>
       </Container>
 
-      <Box ml={4} mr={6}>
-        <Box bg="dark" p={4} mb={4}>
-          <AditionalText>Aditional Information</AditionalText>
-        </Box>
-
-        <Box as="ul">
+      <AditionalInformationContainer>
+        <AditionalText>Aditional Information</AditionalText>
+      </AditionalInformationContainer>
+      <ContainerCastReviews>
+        <CastReviewsList>
           <Item>
             <StyledLink to="cast" state={location.state}>
               Cast
@@ -68,9 +72,9 @@ export default function MovieInfo({ movieDetails }) {
               <ArrowForward />
             </StyledLink>
           </Item>
-        </Box>
-      </Box>
-    </Box>
+        </CastReviewsList>
+      </ContainerCastReviews>
+    </MovieInfoSection>
   );
 }
 

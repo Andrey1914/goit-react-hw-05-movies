@@ -1,18 +1,11 @@
-import { Box } from 'components/Box';
-import { Svg } from './FooterStyled';
+import { StyledFooter, FooterContainer, Svg } from './FooterStyled';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <Box
-      as="footer"
-      display="flex"
-      alignItems="center"
-      py={3}
-      bg="lightMuted"
-      fontSize={0}
-    >
-      <Box display="flex" alignItems="center" mx="auto">
-        © 2022 | Developed by
+    <StyledFooter>
+      <FooterContainer>
+        &copy; {year} | Developed by
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -20,7 +13,7 @@ export default function Footer() {
         >
           <Svg />
         </a>
-      </Box>
-    </Box>
+      </FooterContainer>
+    </StyledFooter>
   );
 }

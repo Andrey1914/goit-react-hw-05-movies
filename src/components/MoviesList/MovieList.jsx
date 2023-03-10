@@ -1,25 +1,26 @@
 import propTypes from 'prop-types';
-import { List } from './MovieListStyled';
+import { MovieSection, MovieContainer, List } from './MovieListStyled';
 import MoviesListItem from 'components/MoviesListItem/MoviesListItem';
-import { Box } from 'components/Box';
 
 export default function MoviesList({ movies }) {
   return (
-    <Box as="section" py={5}>
-      <List>
-        {movies.map(({ id, original_title, poster_path, vote_average }) => {
-          return (
-            <MoviesListItem
-              key={id}
-              id={id}
-              title={original_title}
-              poster={poster_path}
-              vote={vote_average}
-            />
-          );
-        })}
-      </List>
-    </Box>
+    <MovieSection>
+      <MovieContainer>
+        <List>
+          {movies.map(({ id, original_title, poster_path, vote_average }) => {
+            return (
+              <MoviesListItem
+                key={id}
+                id={id}
+                title={original_title}
+                poster={poster_path}
+                vote={vote_average}
+              />
+            );
+          })}
+        </List>
+      </MovieContainer>
+    </MovieSection>
   );
 }
 
