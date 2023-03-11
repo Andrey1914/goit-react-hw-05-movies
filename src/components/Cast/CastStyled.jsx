@@ -6,10 +6,6 @@ export const Line = styled.div`
   background: linear-gradient(45deg, #57576f, #373838);
 `;
 
-export const CastSection = styled.section`
-  padding: 2rem 0;
-`;
-
 export const CastContainer = styled.div`
   margin: 0 auto;
   max-width: 18rem;
@@ -34,18 +30,14 @@ export const CastsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 export const Item = styled.li`
-  width: 12rem;
+  width: calc(50% - 0.5rem);
   border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 `;
 
 export const ActorContainer = styled.div`
@@ -62,13 +54,17 @@ export const Photo = styled.img`
 
 export const ActorNameContainer = styled.div`
   flex-grow: 1;
-  padding: 1rem;
+  padding: 0.6rem;
 `;
 
 export const ActorName = styled.h3`
-  font-size: 1rem;
+  font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.normal};
   color: ${({ theme }) => theme.color.dark};
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1rem;
+  }
 `;
 
 export const NoInformationText = styled.p`

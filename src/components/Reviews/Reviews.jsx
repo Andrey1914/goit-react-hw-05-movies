@@ -1,17 +1,17 @@
 import propTypes from 'prop-types';
 import {
-  ReviewsSection,
   ReviewsContainer,
   ReviewsList,
   Item,
   Author,
   ReviewContent,
 } from './ReviewsStyled';
+import { Section } from 'components/SectionStyled';
 
 export default function Reviews({ reviews }) {
   return (
     <>
-      <ReviewsSection>
+      <Section>
         <ReviewsContainer>
           <ReviewsList>
             {reviews.map(({ author, review, id }) => (
@@ -23,7 +23,7 @@ export default function Reviews({ reviews }) {
             ))}
           </ReviewsList>
         </ReviewsContainer>
-      </ReviewsSection>
+      </Section>
     </>
   );
 }

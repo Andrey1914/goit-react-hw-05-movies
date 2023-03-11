@@ -1,9 +1,10 @@
-import { StyledFooter, FooterContainer, Svg } from './FooterStyled';
+import { FooterContainer, Svg } from './FooterStyled';
+import { FooterSection } from 'components/SectionStyled';
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <StyledFooter>
+    <FooterSection>
       <FooterContainer>
         &copy; {year} | Developed by
         <a
@@ -14,6 +15,6 @@ export default function Footer() {
           <Svg />
         </a>
       </FooterContainer>
-    </StyledFooter>
+    </FooterSection>
   );
 }

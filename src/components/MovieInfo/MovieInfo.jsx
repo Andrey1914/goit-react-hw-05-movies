@@ -2,7 +2,6 @@ import propTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import GoBackButton from 'components/BackButton/BackButton';
 import {
-  MovieInfoSection,
   Image,
   InfoCard,
   InfoCardHeader,
@@ -21,38 +20,42 @@ import {
   Item,
   StyledLink,
   ArrowForward,
-  Container,
+  StyledContainer,
   BoxButton,
 } from './MovieInfoStyled';
+import { Section } from 'components/SectionStyled';
+import { Container } from 'components/ContainerStyled';
 
 export default function MovieInfo({ movieDetails }) {
   const { title, genres, poster, overview, releaseDate, vote } = movieDetails;
   const location = useLocation();
   const genresInfo = genres.map(genre => genre.name).join(',');
   return (
-    <MovieInfoSection>
+    <Section>
       <Container>
-        <Image
-          src={
-            poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Image'
-          }
-          alt={title}
-        />
-        <InfoCard>
-          <InfoCardHeader>
-            <Title>{title}</Title>
-            <SubTitle>Vote: {vote}</SubTitle>
-          </InfoCardHeader>
-          <DateRelease>Date release:</DateRelease>
-          <Date>{releaseDate}</Date>
-          <Overview>Overview:</Overview>
-          <OverviewText>{overview}</OverviewText>
-          <Genres>Genres:</Genres>
-          <GenresText>{genresInfo}</GenresText>
-          <BoxButton>
-            <GoBackButton location={location} />
-          </BoxButton>
-        </InfoCard>
+        <StyledContainer>
+          <Image
+            src={
+              poster ? `https://image.tmdb.org/t/p/w500/${poster}` : 'No Image'
+            }
+            alt={title}
+          />
+          <InfoCard>
+            <InfoCardHeader>
+              <Title>{title}</Title>
+              <SubTitle>Vote: {vote}</SubTitle>
+            </InfoCardHeader>
+            <DateRelease>Date release:</DateRelease>
+            <Date>{releaseDate}</Date>
+            <Overview>Overview:</Overview>
+            <OverviewText>{overview}</OverviewText>
+            <Genres>Genres:</Genres>
+            <GenresText>{genresInfo}</GenresText>
+            <BoxButton>
+              <GoBackButton location={location} />
+            </BoxButton>
+          </InfoCard>
+        </StyledContainer>
       </Container>
 
       <AditionalInformationContainer>
@@ -74,7 +77,7 @@ export default function MovieInfo({ movieDetails }) {
           </Item>
         </CastReviewsList>
       </ContainerCastReviews>
-    </MovieInfoSection>
+    </Section>
   );
 }
 

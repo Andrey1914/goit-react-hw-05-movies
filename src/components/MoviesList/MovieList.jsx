@@ -1,11 +1,13 @@
 import propTypes from 'prop-types';
-import { MovieSection, MovieContainer, List } from './MovieListStyled';
+import { List } from './MovieListStyled';
 import MoviesListItem from 'components/MoviesListItem/MoviesListItem';
+import { Section } from 'components/SectionStyled';
+import { Container } from 'components/ContainerStyled';
 
 export default function MoviesList({ movies }) {
   return (
-    <MovieSection>
-      <MovieContainer>
+    <Section>
+      <Container>
         <List>
           {movies.map(({ id, original_title, poster_path, vote_average }) => {
             return (
@@ -19,8 +21,8 @@ export default function MoviesList({ movies }) {
             );
           })}
         </List>
-      </MovieContainer>
-    </MovieSection>
+      </Container>
+    </Section>
   );
 }
 

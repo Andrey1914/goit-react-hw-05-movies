@@ -2,31 +2,6 @@ import styled from 'styled-components';
 import { Link as NavLink } from 'react-router-dom';
 import { GiFilmSpool } from 'react-icons/gi';
 
-export const HeaderElement = styled.header`
-  width: 100%;
-  padding: 1.5rem 0;
-  background: linear-gradient(45deg, #42425d, #232424);
-`;
-
-export const HeaderContainer = styled.div`
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    position: relative;
-    margin: 0 1.5rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin: 0 2rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin: 0 3.5rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    margin: 0 3.5rem;
-  }
-`;
-
 export const Logo = styled(GiFilmSpool)`
   transition: opacity 250ms;
   margin-right: 1rem;
