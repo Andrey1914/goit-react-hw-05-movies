@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const ReviewsSection = styled.section`
-  padding: 0.5rem 0;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 1.3rem 0;
-  }
-`;
-
 export const ReviewsContainer = styled.div`
   max-width: 18rem;
   margin: 0 auto;
@@ -26,17 +18,24 @@ export const ReviewsContainer = styled.div`
 `;
 
 export const ReviewsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 2rem;
   }
 `;
 
 export const Item = styled.li`
-  width: calc(50% - 2rem);
-  border: 1px solid #000000d1;
+  border: 1px solid #282828d1;
   padding: 1rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: calc(50% - 2rem);
+  }
 `;
 
 export const Author = styled.p`

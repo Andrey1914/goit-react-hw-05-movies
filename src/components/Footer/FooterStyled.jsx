@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import { BsGithub } from 'react-icons/bs';
 
-export const StyledFooter = styled.footer`
-  padding: 1rem 0;
-  background: linear-gradient(45deg, #42425d, #232424);
-`;
-
 export const FooterContainer = styled.div`
   display: flex;
   align-items: center;

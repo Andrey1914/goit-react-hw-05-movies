@@ -2,7 +2,6 @@ import propTypes from 'prop-types';
 import placeholder from '../../default-pic/dog-placeholder.webp';
 import {
   Line,
-  CastSection,
   CastContainer,
   CastsList,
   Item,
@@ -11,12 +10,13 @@ import {
   ActorName,
   ActorNameContainer,
 } from './CastStyled';
+import { Section } from 'components/SectionStyled';
 
 export default function Cast({ cast }) {
   return (
     <>
       <Line />
-      <CastSection>
+      <Section>
         <CastContainer>
           <CastsList>
             {cast.map(({ id, name, photo }) => (
@@ -43,7 +43,7 @@ export default function Cast({ cast }) {
             ))}
           </CastsList>
         </CastContainer>
-      </CastSection>
+      </Section>
     </>
   );
 }

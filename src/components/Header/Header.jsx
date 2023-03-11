@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-  HeaderElement,
-  HeaderContainer,
   NavigationContainer,
   Logo,
   LogoText,
@@ -12,6 +10,8 @@ import {
   Menu,
   Line,
 } from './HeaderStyled';
+import { HeaderSection } from 'components/SectionStyled';
+import { HeaderContainer } from 'components/ContainerStyled';
 import MobileMenu from './MobileMenu';
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
   return (
-    <HeaderElement>
+    <HeaderSection>
       <HeaderContainer>
         <NavigationContainer>
           <NavigationLink to="/">
@@ -46,6 +46,6 @@ export default function Header() {
         </Menu>
         <MobileMenu isOpen={isOpen} toggle={toggle}></MobileMenu>
       </HeaderContainer>
-    </HeaderElement>
+    </HeaderSection>
   );
 }

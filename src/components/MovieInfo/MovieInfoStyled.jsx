@@ -2,30 +2,15 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
 
-export const MovieInfoSection = styled.section`
-  padding: 1rem 0;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    padding: 1.3rem 0;
-  }
-`;
-
-export const Container = styled.div`
-  margin: 0 auto;
-  max-width: 18rem;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 31rem;
-  }
-
+export const StyledContainer = styled.div`
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    max-width: 46rem;
     display: flex;
     gap: 1rem;
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    max-width: 64rem;
+    margin: 0 auto;
+    max-width: 80%;
     gap: 2rem;
   }
 `;
@@ -33,19 +18,17 @@ export const Container = styled.div`
 export const Image = styled.img`
   margin-bottom: 1rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-bottom: 2rem;
-  }
-
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     width: calc(50% - 1rem);
   }
 `;
 
 export const InfoCard = styled.div`
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-bottom: 3rem;
   }
 `;
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Card = styled.li`
+  max-width: 100%;
   border: 0.001rem solid #e1e1e1;
   border-radius: ${({ theme }) => theme.radii.normal};
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
@@ -15,15 +16,15 @@ export const Card = styled.li`
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 15.62rem;
+    max-width: calc(100% / 2 - 0.5rem);
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    max-width: 14.7rem;
+    max-width: calc(100% / 3 - 0.67rem);
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    max-width: 18rem;
+    max-width: calc(100% / 4 - 0.76rem);
   }
 `;
 
