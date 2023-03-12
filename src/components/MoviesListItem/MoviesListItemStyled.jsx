@@ -2,16 +2,15 @@ import styled from 'styled-components';
 
 export const Card = styled.li`
   max-width: 100%;
-  border: 0.001rem solid #e1e1e1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: ${({ theme }) => theme.radii.normal};
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   :hover,
   :focus {
-    box-shadow: 0 10px 10px -5px rgba(20, 0, 132, 0.347);
-    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    transform: scale(0.98);
     cursor: zoom-in;
   }
 

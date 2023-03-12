@@ -13,6 +13,7 @@ import {
 import { HeaderSection } from 'components/SectionStyled';
 import { HeaderContainer } from 'components/ContainerStyled';
 import MobileMenu from './MobileMenu';
+import MovieIconLogo from '../../images/logo-movie.png';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
         <NavigationContainer>
           <NavigationLink to="/">
             <LogoContainer>
-              <Logo />
+              <Logo src={MovieIconLogo} alt="logo" />
               <LogoText>Filmoteka</LogoText>
             </LogoContainer>
           </NavigationLink>

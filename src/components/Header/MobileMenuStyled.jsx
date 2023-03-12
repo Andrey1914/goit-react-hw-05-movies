@@ -38,7 +38,10 @@ export const CloseIcon = styled(closeIcon)`
 
 export const CloseText = styled.span`
   font-family: ${({ theme }) => theme.fonts.montserrat};
+  font-weight: ${({ theme }) => theme.fontWeights.thin};
   color: ${({ theme }) => theme.color.light};
+  font-size: 1rem;
+
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.75rem;
   }
@@ -58,12 +61,22 @@ export const MobileMenuList = styled.ul`
 `;
 
 export const MobileMenuLink = styled(MobileMenuNavLink)`
-  font-family: ${({ theme }) => theme.fonts.roboto};
-  font-size: 2rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: ${({ theme }) => theme.fonts.montserrat};
+  font-size: 2.5rem;
+  font-weight: ${({ theme }) => theme.fontWeights.thin};
   transition: 0.3s ease;
-  text-transform: uppercase;
   color: #fff;
-  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+
+  :hover,
+  :focus {
+    color: ${({ theme }) => theme.color.orange};
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
 `;

@@ -7,6 +7,7 @@ export const theme = {
     secondaryLight: '#f1f1f1',
     tertiaryLight: '#d3d3d3',
     link: '#4353ff',
+    orange: '#e64e04',
 
     backdrop: 'rgba(0, 0, 0, 0.8)',
   },

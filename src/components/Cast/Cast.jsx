@@ -2,7 +2,6 @@ import propTypes from 'prop-types';
 import placeholder from '../../default-pic/dog-placeholder.webp';
 import {
   Line,
-  CastContainer,
   CastsList,
   Item,
   ActorContainer,
@@ -11,38 +10,36 @@ import {
   ActorNameContainer,
 } from './CastStyled';
 import { Section } from 'components/SectionStyled';
+import { Container, StyledContainer } from 'components/ContainerStyled';
 
 export default function Cast({ cast }) {
   return (
     <>
       <Line />
       <Section>
-        <CastContainer>
-          <CastsList>
-            {cast.map(({ id, name, photo }) => (
-              <Item key={id}>
-                <ActorContainer>
-                  {photo ? (
-                    <Photo
-                      src={`https://image.tmdb.org/t/p/w300/${photo}`}
-                      alt={name}
-                    />
-                  ) : (
-                    <img
-                      src={placeholder}
-                      alt={name}
-                      width="100%"
-                      height="100%"
-                    />
-                  )}
-                  <ActorNameContainer>
-                    <ActorName>{name}</ActorName>
-                  </ActorNameContainer>
-                </ActorContainer>
-              </Item>
-            ))}
-          </CastsList>
-        </CastContainer>
+        <Container>
+          <StyledContainer>
+            <CastsList>
+              {cast.map(({ id, name, photo }) => (
+                <Item key={id}>
+                  <ActorContainer>
+                    {photo ? (
+                      <Photo
+                        src={`https://image.tmdb.org/t/p/w300/${photo}`}
+                        alt={name}
+                      />
+                    ) : (
+                      <Photo src={placeholder} alt={name} width="100%" />
+                    )}
+                    <ActorNameContainer>
+                      <ActorName>{name}</ActorName>
+                    </ActorNameContainer>
+                  </ActorContainer>
+                </Item>
+              ))}
+            </CastsList>
+          </StyledContainer>
+        </Container>
       </Section>
     </>
   );

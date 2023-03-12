@@ -7,11 +7,11 @@ export const FooterContainer = styled.div`
   justify-content: center;
   margin: 0 auto;
   color: ${({ theme }) => theme.color.light};
-  font-size: 0.7rem;
+  font-size: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 1.2rem;
-    font-weight: ${({ theme }) => theme.fontWeights.normal};
+    font-size: 1.5rem;
+    font-weight: ${({ theme }) => theme.fontWeights.thin};
   }
 `;
 
@@ -24,12 +24,13 @@ export const Svg = styled(BsGithub)`
   transition: all 250ms;
   :hover,
   :focus {
+    color: ${({ theme }) => theme.color.orange};
     opacity: 0.8;
     transform: scale(0.92);
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 2rem;
+    height: 2rem;
   }
 `;
