@@ -2,34 +2,16 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
 
-export const StyledContainer = styled.div`
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    display: flex;
-    gap: 1rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    margin: 0 auto;
-    max-width: 80%;
-    gap: 2rem;
-  }
-`;
-
 export const Image = styled.img`
   margin-bottom: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin-bottom: 3rem;
     width: calc(50% - 1rem);
   }
 `;
 
 export const InfoCard = styled.div`
   margin-bottom: 1rem;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin-bottom: 3rem;
-  }
 `;
 
 export const InfoCardHeader = styled.div`
@@ -133,37 +115,26 @@ export const BoxButton = styled.div``;
 export const AditionalInformationContainer = styled.div`
   background: linear-gradient(45deg, #42425d, #232424);
   padding: 1rem 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     padding: 1.5rem 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 1.5rem 8rem;
+    margin-bottom: 3rem;
   }
 `;
 
 export const AditionalText = styled.p`
   color: ${({ theme }) => theme.color.light};
-  font-size: 0.8rem;
-  font-weight: ${({ theme }) => theme.fontWeights.normal};
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeights.thin};
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: 1.3rem;
-  }
-`;
-
-export const ContainerCastReviews = styled.div`
-  margin: 0 1rem;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin: 0 1.8rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    margin: 0 8rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -177,7 +148,7 @@ export const CastReviewsList = styled.ul`
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 `;
 
@@ -187,21 +158,32 @@ export const Item = styled.li`
 `;
 
 export const StyledLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
   color: ${({ theme }) => theme.color.dark};
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: 1.1rem;
-  }
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
 
   :hover,
   :focus {
+    color: ${({ theme }) => theme.color.orange};
+    transform: scale(1.2);
     opacity: 0.8;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 1.1rem;
   }
 `;
 
 export const ArrowForward = styled(MdOutlineArrowForwardIos)`
   margin-left: 8px;
   height: 0.5rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-left: 0.5rem;
+    height: 1rem;
+  }
 `;

@@ -1,32 +1,17 @@
 import styled from 'styled-components';
 import { Link as NavLink } from 'react-router-dom';
-import { GiFilmSpool } from 'react-icons/gi';
+// import { GiFilmSpool } from 'react-icons/gi';
 
-export const Logo = styled(GiFilmSpool)`
+export const Logo = styled.img`
   transition: opacity 250ms;
   margin-right: 1rem;
   color: ${({ theme }) => theme.color.light};
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 2.8rem;
-    height: 2.8rem;
-  }
+  height: 3rem;
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.color.light};
 `;
 
 export const LogoText = styled.span`
@@ -57,24 +42,25 @@ export const NavigationItem = styled.li`
   transition: transform 250ms ease-in-out;
   :hover,
   :focus {
-    transform: scale(0.92);
-    color: ${({ theme }) => theme.color.link};
+    transform: scale(1.2);
   }
 `;
 export const NavigationLink = styled(NavLink)`
   font-size: 1.5rem;
 
   color: ${({ theme }) => theme.color.light};
-  transition: opacity 250ms ease-in-out;
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+
   :hover,
   :focus {
-    color: ${({ theme }) => theme.color.link};
-    opacity: 0.8;
+    transform: scale(1.2);
+    color: ${({ theme }) => theme.color.orange};
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 2rem;
-    font-weight: ${({ theme }) => theme.fontWeights.normal};
+    font-weight: ${({ theme }) => theme.fontWeights.thin};
   }
 `;
 

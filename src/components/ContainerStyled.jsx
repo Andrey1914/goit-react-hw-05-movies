@@ -17,6 +17,19 @@ export const HeaderContainer = styled.div`
   }
 `;
 
+export const StyledContainer = styled.div`
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin: 0 auto;
+    max-width: 80%;
+    gap: 2rem;
+  }
+`;
+
 export const Container = styled.div`
   margin: 0 auto;
   max-width: calc(100% - 20px);

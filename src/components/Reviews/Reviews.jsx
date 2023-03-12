@@ -1,28 +1,32 @@
 import propTypes from 'prop-types';
 import {
-  ReviewsContainer,
+  Line,
   ReviewsList,
   Item,
   Author,
   ReviewContent,
 } from './ReviewsStyled';
 import { Section } from 'components/SectionStyled';
+import { Container, StyledContainer } from 'components/ContainerStyled';
 
 export default function Reviews({ reviews }) {
   return (
     <>
+      <Line />
       <Section>
-        <ReviewsContainer>
-          <ReviewsList>
-            {reviews.map(({ author, review, id }) => (
-              <Item key={id}>
-                <Author>
-                  {author}: <ReviewContent>"{review}"</ReviewContent>
-                </Author>
-              </Item>
-            ))}
-          </ReviewsList>
-        </ReviewsContainer>
+        <Container>
+          <StyledContainer>
+            <ReviewsList>
+              {reviews.map(({ author, review, id }) => (
+                <Item key={id}>
+                  <Author>
+                    {author}: <ReviewContent>"{review}"</ReviewContent>
+                  </Author>
+                </Item>
+              ))}
+            </ReviewsList>
+          </StyledContainer>
+        </Container>
       </Section>
     </>
   );

@@ -15,16 +15,14 @@ import {
   GenresText,
   AditionalInformationContainer,
   AditionalText,
-  ContainerCastReviews,
   CastReviewsList,
   Item,
   StyledLink,
   ArrowForward,
-  StyledContainer,
   BoxButton,
 } from './MovieInfoStyled';
 import { Section } from 'components/SectionStyled';
-import { Container } from 'components/ContainerStyled';
+import { Container, StyledContainer } from 'components/ContainerStyled';
 
 export default function MovieInfo({ movieDetails }) {
   const { title, genres, poster, overview, releaseDate, vote } = movieDetails;
@@ -61,22 +59,25 @@ export default function MovieInfo({ movieDetails }) {
       <AditionalInformationContainer>
         <AditionalText>Aditional Information</AditionalText>
       </AditionalInformationContainer>
-      <ContainerCastReviews>
-        <CastReviewsList>
-          <Item>
-            <StyledLink to="cast" state={location.state}>
-              Cast
-              <ArrowForward />
-            </StyledLink>
-          </Item>
-          <Item>
-            <StyledLink to="reviews" state={location.state}>
-              Reviews
-              <ArrowForward />
-            </StyledLink>
-          </Item>
-        </CastReviewsList>
-      </ContainerCastReviews>
+
+      <Container>
+        <StyledContainer>
+          <CastReviewsList>
+            <Item>
+              <StyledLink to="cast" state={location.state}>
+                Cast
+                <ArrowForward />
+              </StyledLink>
+            </Item>
+            <Item>
+              <StyledLink to="reviews" state={location.state}>
+                Reviews
+                <ArrowForward />
+              </StyledLink>
+            </Item>
+          </CastReviewsList>
+        </StyledContainer>
+      </Container>
     </Section>
   );
 }

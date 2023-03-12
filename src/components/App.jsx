@@ -8,7 +8,7 @@ import { Global } from '@emotion/react';
 import { GlobalStyles } from './GlobalStyles';
 
 const Home = lazy(() => import('../pages/Home'));
-const Movies = lazy(() => import('../pages/Movies'));
+const Movies = lazy(() => import('../pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('../pages/MovieDetails'));
 const CastPage = lazy(() => import('../pages/CastPage'));
 const ReviewsPage = lazy(() => import('../pages/ReviewsPage'));
