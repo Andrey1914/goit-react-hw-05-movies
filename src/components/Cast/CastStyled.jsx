@@ -18,6 +18,7 @@ export const Item = styled.li`
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--bg-item);
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     width: calc(100% / 3 - 0.67rem);
@@ -52,7 +53,7 @@ export const ActorNameContainer = styled.div`
 export const ActorName = styled.h3`
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.normal};
-  color: ${({ theme }) => theme.color.dark};
+  color: var(--text);
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1rem;

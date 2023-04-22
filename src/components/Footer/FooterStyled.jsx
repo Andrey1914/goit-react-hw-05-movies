@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BsGithub } from 'react-icons/bs';
+import { BsLinkedin } from 'react-icons/bs';
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ export const FooterContainer = styled.div`
   }
 `;
 
-export const Svg = styled(BsGithub)`
+export const Svg = styled(BsLinkedin)`
   margin-left: 1rem;
   color: ${({ theme }) => theme.color.light};
   width: 1rem;

@@ -22,32 +22,29 @@ export const InfoCardHeader = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: ${({ theme }) => theme.color.dark};
   font-size: 0.8rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.5rem;
   }
 `;
 
 export const SubTitle = styled.h3`
-  color: ${({ theme }) => theme.color.dark};
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.normal};
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
   }
 `;
 
 export const DateRelease = styled.p`
-  color: ${({ theme }) => theme.color.dark};
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin-bottom: 0.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
@@ -58,19 +55,18 @@ export const Date = styled.p`
   font-size: 0.6rem;
   margin-bottom: 0.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 `;
 
 export const Overview = styled.p`
-  color: ${({ theme }) => theme.color.dark};
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin-bottom: 0.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
@@ -81,19 +77,18 @@ export const OverviewText = styled.p`
   font-size: 0.6rem;
   margin-bottom: 0.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 `;
 
 export const Genres = styled.p`
-  color: ${({ theme }) => theme.color.dark};
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin-bottom: 0.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
@@ -104,7 +99,7 @@ export const GenresText = styled.p`
   font-size: 0.6rem;
   margin-bottom: 1.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
@@ -117,7 +112,7 @@ export const AditionalInformationContainer = styled.div`
   padding: 1rem 2rem;
   margin-bottom: 1.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 1.5rem 2.5rem;
     margin-bottom: 2rem;
   }
@@ -133,7 +128,7 @@ export const AditionalText = styled.p`
   font-size: 1rem;
   font-weight: ${({ theme }) => theme.fontWeights.thin};
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.8rem;
   }
 `;
@@ -143,7 +138,7 @@ export const CastReviewsList = styled.ul`
   flex-direction: column;
   gap: 0.2rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     gap: 0.6rem;
   }
 
@@ -160,7 +155,7 @@ export const Item = styled.li`
 export const StyledLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.color.dark};
+
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   transform: scale(1);
@@ -173,7 +168,7 @@ export const StyledLink = styled(NavLink)`
     opacity: 0.8;
   }
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
   }
 `;
@@ -182,7 +177,7 @@ export const ArrowForward = styled(MdOutlineArrowForwardIos)`
   margin-left: 8px;
   height: 0.5rem;
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     margin-left: 0.5rem;
     height: 1rem;
   }
