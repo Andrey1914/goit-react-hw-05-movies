@@ -4,7 +4,6 @@ import Layout from './Layout/Layout';
 import NotFound from 'pages/NotFound/NotFound';
 import LoaderOval from './Loader/Loader';
 
-import { Global } from '@emotion/react';
 import { GlobalStyles } from './GlobalStyles';
 
 const Home = lazy(() => import('../pages/Home'));
@@ -16,7 +15,7 @@ const ReviewsPage = lazy(() => import('../pages/ReviewsPage'));
 export default function App() {
   return (
     <>
-      <Global styles={GlobalStyles} />
+      <GlobalStyles />
       <Suspense fullback={<LoaderOval />}>
         <Routes>
           <Route path="/" element={<Layout />}>

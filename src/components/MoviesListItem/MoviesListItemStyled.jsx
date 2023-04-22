@@ -39,6 +39,9 @@ export const CardDescription = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem;
+  background-color: var(--bg-item);
+  border-top-left-radius: ${({ theme }) => theme.radii.normal};
+  border-top-right-radius: ${({ theme }) => theme.radii.normal};
 `;
 
 export const Image = styled.img`
@@ -48,12 +51,9 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h2`
-  color: ${({ theme }) => theme.color.dark};
+  color: var(--text);
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    font-size: 0.7rem;
-  }
+  font-size: 0.7rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 1rem;
@@ -62,13 +62,10 @@ export const Title = styled.h2`
 
 export const Vote = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.normal};
-  color: ${({ theme }) => theme.color.darkGray};
+  color: var(--text);
   margin-left: 1rem;
   flex: none;
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    font-size: 0.6rem;
-  }
+  font-size: 0.6rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 0.8rem;

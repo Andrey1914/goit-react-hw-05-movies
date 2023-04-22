@@ -14,6 +14,7 @@ import { HeaderSection } from 'components/SectionStyled';
 import { HeaderContainer } from 'components/ContainerStyled';
 import MobileMenu from './MobileMenu';
 import MovieIconLogo from '../../images/logo-movie.png';
+import SwitchTheme from 'components/SwitchTheme/SwitchTheme';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +32,7 @@ export default function Header() {
               <LogoText>Filmoteka</LogoText>
             </LogoContainer>
           </NavigationLink>
+          <SwitchTheme />
           <NavigationList>
             <NavigationItem>
               <NavigationLink to="/">Home</NavigationLink>

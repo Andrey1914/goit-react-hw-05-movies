@@ -11,13 +11,10 @@ export const FooterSection = styled.footer`
 `;
 
 export const Section = styled.section`
-  padding: 1.5rem 0;
+  background-color: var(--bg);
+  padding: 2.5rem 0;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding: 2rem 0;
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 3rem 0;
   }
 `;
