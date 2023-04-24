@@ -32,9 +32,9 @@ export const StyledContainer = styled.div`
 
 export const Container = styled.div`
   margin: 0 auto;
-  max-width: calc(100% - 20px);
+  max-width: calc(100% - 2.5rem);
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 3.5rem);
   }
 `;

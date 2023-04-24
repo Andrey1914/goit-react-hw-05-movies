@@ -10,15 +10,12 @@ export const GoBackBtn = styled.button`
   font-weight: ${({ theme }) => theme.fontWeights.thin};
   transform: scale(1);
   transition: all 250ms;
+  padding: 0.5rem 1rem;
+  font-size: 0.6rem;
   :hover,
   :focus {
     color: ${({ theme }) => theme.color.orange};
     transform: scale(0.92);
-  }
-
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    padding: 0.5rem 1rem;
-    font-size: 0.6rem;
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {

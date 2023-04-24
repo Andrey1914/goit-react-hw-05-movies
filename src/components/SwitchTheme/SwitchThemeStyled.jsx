@@ -3,15 +3,15 @@ import { WiMoonAltWaningCrescent4 } from 'react-icons/wi';
 
 export const SwitchThemeBox = styled.div`
   position: relative;
-  top: 70px;
-  left: -70px;
+  top: 4.3rem;
+  left: -12rem;
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    top: 73px;
-    left: -260px;
+    top: 4.6rem;
+    left: -16rem;
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    left: -225px;
+    left: -14rem;
   }
 `;
 

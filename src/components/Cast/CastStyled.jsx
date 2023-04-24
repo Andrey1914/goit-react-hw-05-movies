@@ -13,7 +13,7 @@ export const CastsList = styled.ul`
 `;
 
 export const Item = styled.li`
-  width: calc(50% - 0.5rem);
+  width: calc(100% / 3 - 0.67rem);
   border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -21,11 +21,11 @@ export const Item = styled.li`
   background-color: var(--bg-item);
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: calc(100% / 3 - 0.67rem);
+    width: calc(100% / 4 - 0.75rem);
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: calc(100% / 4 - 0.75rem);
+    width: calc(100% / 5 - 0.8rem);
   }
 `;
 

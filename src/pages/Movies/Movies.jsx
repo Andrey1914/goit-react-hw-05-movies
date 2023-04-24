@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesBySearch } from 'services/api';
-import { Form, Button, Input } from './MoviesStyled';
+import { Form, Button, Input, SearchIcon } from './MoviesStyled';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MoviesList from '../../components/MoviesList/MoviesList';
 import { Mapper } from 'utils/Mapper';
 
-import { AiOutlineSearch } from 'react-icons/ai';
 import { Section } from 'components/SectionStyled';
 import { Container } from 'components/ContainerStyled';
 
@@ -54,7 +53,7 @@ export default function Movies() {
         <Container>
           <Form onSubmit={onFormSubmit}>
             <Button type="submit">
-              <AiOutlineSearch size={20} />
+              <SearchIcon size={20} />
             </Button>
             <Input
               type="text"

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export const Form = styled.form`
   margin: auto;
@@ -23,12 +24,18 @@ export const Button = styled.button`
   }
 `;
 
+export const SearchIcon = styled(AiOutlineSearch)`
+  color: var(--text);
+`;
+
 export const Input = styled.input`
   width: 300px;
   height: 25px;
   font-size: 20px;
   border: none;
-  border-bottom: 0.5px solid #00000073;
+  border-bottom: 0.5px solid var(--text);
+  background-color: var(--bg);
+  color: var(--text);
   font: inherit;
   font-size: inherit;
   outline: none;
