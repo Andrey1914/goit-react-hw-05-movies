@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
 
 export const Image = styled.img`
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  border-radius: ${({ theme }) => theme.radii.normal};
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     width: calc(50% - 1rem);
@@ -11,7 +12,7 @@ export const Image = styled.img`
 `;
 
 export const InfoCard = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 `;
 
 export const InfoCardHeader = styled.div`
@@ -27,6 +28,7 @@ export const Title = styled.h2`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.5rem;
+    padding-right: 1rem;
   }
 `;
 
@@ -136,10 +138,10 @@ export const AditionalText = styled.p`
 export const CastReviewsList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    gap: 0.6rem;
+    gap: 1.2rem;
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -155,7 +157,7 @@ export const Item = styled.li`
 export const StyledLink = styled(NavLink)`
   display: flex;
   align-items: center;
-
+  padding-left: 1rem;
   font-size: 0.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   transform: scale(1);
@@ -164,7 +166,7 @@ export const StyledLink = styled(NavLink)`
   :hover,
   :focus {
     color: ${({ theme }) => theme.color.orange};
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: 0.8;
   }
 

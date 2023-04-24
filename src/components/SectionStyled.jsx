@@ -11,6 +11,7 @@ export const FooterSection = styled.footer`
 `;
 
 export const Section = styled.section`
+  min-height: 100vh;
   background-color: var(--bg);
   padding: 2.5rem 0;
 

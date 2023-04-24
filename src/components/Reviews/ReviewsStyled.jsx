@@ -22,7 +22,7 @@ export const Item = styled.li`
   padding: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: calc(100% / 2 - 2rem);
+    width: calc(100% / 2 - 0.5rem);
   }
 `;
 

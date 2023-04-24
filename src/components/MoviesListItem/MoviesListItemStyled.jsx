@@ -14,16 +14,12 @@ export const Card = styled.li`
     cursor: zoom-in;
   }
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     max-width: calc(100% / 2 - 0.5rem);
   }
 
-  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    max-width: calc(100% / 3 - 0.67rem);
-  }
-
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    max-width: calc(100% / 4 - 0.76rem);
+    max-width: calc(100% / 3 - 0.69rem);
   }
 `;
 
@@ -38,7 +34,7 @@ export const CardDescription = styled.div`
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem;
+  padding: 1rem;
   background-color: var(--bg-item);
   border-top-left-radius: ${({ theme }) => theme.radii.normal};
   border-top-right-radius: ${({ theme }) => theme.radii.normal};
@@ -53,10 +49,10 @@ export const Image = styled.img`
 export const Title = styled.h2`
   color: var(--text);
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  font-size: 0.7rem;
+  font-size: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `;
 
