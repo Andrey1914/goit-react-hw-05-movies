@@ -6,7 +6,7 @@ import {
   InfoCard,
   InfoCardHeader,
   Title,
-  SubTitle,
+  Vote,
   DateRelease,
   Date,
   Overview,
@@ -20,6 +20,8 @@ import {
   StyledLink,
   ArrowForward,
   BoxButton,
+  VoteBox,
+  OverviewBox,
 } from './MovieInfoStyled';
 import { Section } from 'components/SectionStyled';
 import { Container, StyledContainer } from 'components/ContainerStyled';
@@ -41,14 +43,20 @@ export default function MovieInfo({ movieDetails }) {
           <InfoCard>
             <InfoCardHeader>
               <Title>{title}</Title>
-              <SubTitle>Vote: {vote}</SubTitle>
+              <VoteBox>
+                <Vote>Vote: {vote}</Vote>
+              </VoteBox>
             </InfoCardHeader>
-            <DateRelease>Date release:</DateRelease>
-            <Date>{releaseDate}</Date>
-            <Overview>Overview:</Overview>
-            <OverviewText>{overview}</OverviewText>
-            <Genres>Genres:</Genres>
-            <GenresText>{genresInfo}</GenresText>
+            <DateRelease>
+              Date release:<Date>{releaseDate}</Date>
+            </DateRelease>
+            <OverviewBox>
+              <Overview>Overview:</Overview>
+              <OverviewText>{overview}</OverviewText>
+            </OverviewBox>
+            <Genres>
+              Genres:<GenresText>{genresInfo}</GenresText>
+            </Genres>
             <BoxButton>
               <GoBackButton location={location} />
             </BoxButton>

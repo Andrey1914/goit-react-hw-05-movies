@@ -22,7 +22,7 @@ export const theme = {
 
   fonts: {
     montserrat: "'Montserrat', sans-serif",
-    roboto: "'Roboto', sans-serif",
+    nanum: "'Nanum Myeongjo', sans-serif",
   },
   fontSizes: {
     xs: '12px',
@@ -35,6 +35,7 @@ export const theme = {
     thin: 100,
     normal: 400,
     bold: 700,
+    extraBold: 800,
   },
 
   borders: {

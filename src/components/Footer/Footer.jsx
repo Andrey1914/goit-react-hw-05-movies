@@ -10,7 +10,7 @@ export default function Footer() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/Andrey1914"
+          href="https://www.linkedin.com/in/andrei-kurka/"
         >
           <Svg />
         </a>

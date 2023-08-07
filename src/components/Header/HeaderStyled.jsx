@@ -14,11 +14,15 @@ export const LogoContainer = styled.div`
   align-items: center;
 `;
 
-export const LogoText = styled.span`
+export const LogoSpan = styled.span`
+  font-family: ${({ theme }) => theme.fonts.montserrat};
   font-weight: ${({ theme }) => theme.fontWeights.normal};
-  @media all and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    display: none;
-  }
+  color: ${({ theme }) => theme.color.orange};
+`;
+
+export const LogoText = styled.span`
+  font-family: ${({ theme }) => theme.fonts.montserrat};
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
 `;
 
 export const NavigationContainer = styled.nav`
@@ -38,23 +42,23 @@ export const NavigationList = styled.ul`
 `;
 
 export const NavigationItem = styled.li`
-  transform: scale(1);
+  /* transform: scale(1);
   transition: transform 250ms ease-in-out;
   :hover,
   :focus {
     transform: scale(1.2);
-  }
+  } */
 `;
 export const NavigationLink = styled(NavLink)`
   font-size: 1.5rem;
-
+  font-family: ${({ theme }) => theme.fonts.montserrat};
   color: ${({ theme }) => theme.color.light};
-  transform: scale(1);
-  transition: transform 250ms ease-in-out;
+  /* transform: scale(1); */
+  transition: color 250ms ease-in-out;
 
   :hover,
   :focus {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     color: ${({ theme }) => theme.color.orange};
   }
 

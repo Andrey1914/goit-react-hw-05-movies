@@ -19,30 +19,49 @@ export const InfoCardHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const Title = styled.h2`
-  font-size: 0.8rem;
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.fontWeights.extraBold};
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.5rem;
     padding-right: 1rem;
   }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.8rem;
+  }
 `;
 
-export const SubTitle = styled.h3`
-  font-size: 0.6rem;
-  font-weight: ${({ theme }) => theme.fontWeights.normal};
+export const VoteBox = styled.div`
+  background: linear-gradient(45deg, #c0c0c0, #6a7777);
+  border-radius: ${({ theme }) => theme.radii.normal};
+  padding: 0.3rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+`;
+
+export const Vote = styled.h3`
+  font-size: 0.6rem;
+  font-family: ${({ theme }) => theme.fonts.montserrat};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 0.7rem;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1rem;
   }
 `;
 
 export const DateRelease = styled.p`
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin-bottom: 0.5rem;
 
@@ -50,27 +69,42 @@ export const DateRelease = styled.p`
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
+  }
 `;
 
-export const Date = styled.p`
+export const Date = styled.span`
   font-weight: ${({ theme }) => theme.fontWeights.normal};
   font-size: 0.6rem;
-  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
   }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const OverviewBox = styled.div`
+  padding-right: 2rem;
 `;
 
 export const Overview = styled.p`
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin-bottom: 0.5rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -83,27 +117,38 @@ export const OverviewText = styled.p`
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Genres = styled.p`
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
+  }
 `;
 
-export const GenresText = styled.p`
+export const GenresText = styled.span`
   font-weight: ${({ theme }) => theme.fontWeights.normal};
   font-size: 0.6rem;
-  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -127,7 +172,9 @@ export const AditionalInformationContainer = styled.div`
 
 export const AditionalText = styled.p`
   color: ${({ theme }) => theme.color.light};
+  text-align: center;
   font-size: 1rem;
+  font-family: ${({ theme }) => theme.fonts.montserrat};
   font-weight: ${({ theme }) => theme.fontWeights.thin};
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -159,7 +206,8 @@ export const StyledLink = styled(NavLink)`
   align-items: center;
   padding-left: 1rem;
   font-size: 0.6rem;
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  font-family: ${({ theme }) => theme.fonts.montserrat};
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
   transform: scale(1);
   transition: transform 250ms ease-in-out;
 
@@ -172,6 +220,10 @@ export const StyledLink = styled(NavLink)`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1.1rem;
+  }
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
   }
 `;
 

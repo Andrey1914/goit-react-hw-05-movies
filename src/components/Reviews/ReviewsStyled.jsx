@@ -35,7 +35,7 @@ export const Author = styled.p`
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -48,7 +48,7 @@ export const ReviewContent = styled.span`
   }
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 `;
 

@@ -7,6 +7,7 @@ export const FooterContainer = styled.div`
   justify-content: center;
   margin: 0 auto;
   color: ${({ theme }) => theme.color.light};
+  font-family: ${({ theme }) => theme.fonts.montserrat};
   font-size: 1rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {

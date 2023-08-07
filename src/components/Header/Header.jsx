@@ -9,6 +9,7 @@ import {
   NavigationLink,
   Menu,
   Line,
+  LogoSpan,
 } from './HeaderStyled';
 import { HeaderSection } from 'components/SectionStyled';
 import { HeaderContainer } from 'components/ContainerStyled';
@@ -29,7 +30,8 @@ export default function Header() {
           <NavigationLink to="/">
             <LogoContainer>
               <Logo src={MovieIconLogo} alt="logo" />
-              <LogoText>Filmoteka</LogoText>
+              <LogoSpan>Film</LogoSpan>
+              <LogoText>gazer</LogoText>
             </LogoContainer>
           </NavigationLink>
           <SwitchTheme />

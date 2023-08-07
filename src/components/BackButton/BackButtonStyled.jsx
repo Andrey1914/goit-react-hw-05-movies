@@ -7,11 +7,12 @@ export const GoBackBtn = styled.button`
   color: ${({ theme }) => theme.color.light};
   border: ${({ theme }) => theme.borders.none};
   border-radius: ${({ theme }) => theme.radii.normal};
+  font-family: ${({ theme }) => theme.fonts.montserrat};
   font-weight: ${({ theme }) => theme.fontWeights.thin};
   transform: scale(1);
   transition: all 250ms;
   padding: 0.5rem 1rem;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   :hover,
   :focus {
     color: ${({ theme }) => theme.color.orange};

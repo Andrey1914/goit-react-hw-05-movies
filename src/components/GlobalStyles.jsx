@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import MontserratThin from '../fonts/Montserrat-Thin.ttf';
+import MontserratRegular from '../fonts/Montserrat-Regular.ttf';
+import MontserratBold from '../fonts/Montserrat-Bold.ttf';
 import 'modern-normalize';
 
 export const GlobalStyles = createGlobalStyle`
@@ -20,21 +23,16 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  @font-face {
-    font-family: Montserrat;
-    src: url('../fonts/Montserrat-Thin.ttf'), format('truetype');
-  }
-  @font-face {
-    font-family: Montserrat;
-    src: url('../fonts/Montserrat-Regular.ttf'), format('truetype');
-  }
-  @font-face {
-    font-family: Montserrat;
-    src: url('../fonts/Montserrat-Bold.ttf'), format('truetype');
-  }
+  /* @font-face {
+    font-family: 'Montserrat';
+    src: url(${MontserratThin}) format('ttf'),
+    url(${MontserratRegular}) format('ttf'),
+    url(${MontserratBold}) format('ttf');
+  } */
   body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
